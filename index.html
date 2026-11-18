@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shravani Kulkarni | Data Engineer</title>
+<meta name="description" content="Data Engineer who builds pipelines, LLM apps, and internal tools end to end. Python, SQL, RAG, Power BI.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top">Shravani Kulkarni</a>
+    <nav aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero wrap">
+  <p class="eyebrow">Data Engineer · Tempe, AZ · Open to relocation</p>
+  <h1>I build data pipelines, LLM apps, and internal tools, end to end.</h1>
+  <p class="lede">I shipped a RAG assistant and Python/SQL pipelines that cut a 3-hour process to 20 minutes, and built an analytics app that surfaced $31K in yearly savings. I test LLMs against simple baselines before shipping them, and I work directly with non-technical teams to turn vague asks into working systems.</p>
+  <div class="actions">
+    <a class="btn primary" href="https://drive.google.com/file/d/1VD20Q1ZDSuOYR6wA9f7kshZLSj4AENpf/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+    <a class="btn" href="https://github.com/shravanii15" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/shravani-kulkarni2003/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="mailto:work.shravanikk@gmail.com">Email</a>
+  </div>
+  <dl class="proof">
+    <div><dt>3 h → 20 min</dt><dd>Reporting ETL across 5 databases, 120K+ records (NIC)</dd></div>
+    <div><dt>$31,360 / yr</dt><dd>Policy savings found with a client-side analytics app (ASU)</dd></div>
+    <div><dt>170 gaps</dt><dd>Statistically tested curriculum-to-market skill gaps (AlignED)</dd></div>
+  </dl>
+</section>
+
+<section id="work" class="wrap">
+  <h2>Selected work</h2>
+
+  <article class="case">
+    <header>
+      <h3>AlignED: Curriculum-to-Market Gap Engine</h3>
+      <p class="stack">Python · SQL · LLMs · Statistics · Streamlit · FastAPI · Prefect · Docker · GitHub Actions</p>
+    </header>
+    <div class="grid">
+      <div>
+        <h4>Question</h4>
+        <p>Do graduate computing programs teach what employers ask for? "Industry-ready" is usually claimed, not measured, so I built a system that measures it and reports how far the measurement can be trusted.</p>
+        <h4>What I built</h4>
+        <ul>
+          <li>Matched 1,378 courses from 13 programs against 1,660 job postings on O*NET skills, and tested 170 skill gaps with z-tests and Fisher's exact test under FDR control.</li>
+          <li>A validated, idempotent daily ingestion pipeline (retries, raw snapshots, de-duplication, audit tables), orchestrated with Prefect and run on GitHub Actions.</li>
+          <li>A versioned, authenticated, rate-limited REST API (FastAPI) with OpenAPI docs and Docker packaging, covered by 218 automated tests gated in CI.</li>
+          <li>A public Streamlit app with 724 ranked recommendations.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Decision I can defend</h4>
+        <p>I held out 50 fresh items, labeled before either method ran, and compared a keyword baseline against an LLM with paired bootstrap confidence intervals. The keyword method won (F1 0.311 vs 0.198), so I shipped it. On the 104 items used during development the order was reversed, which is why the held-out set mattered.</p>
+        <h4>Limits I report</h4>
+        <p>Fifty items is a small sample. No demand trend survived multiple-comparison correction (0 of 67 skills), so the trends page labels them early hints.</p>
+        <h4>Evidence</h4>
+        <p class="links">
+          <a href="LOOM_DEMO_LINK_HERE" target="_blank" rel="noopener">Watch demo</a>
+          <a href="https://aligned-shravanikulkarni.streamlit.app" target="_blank" rel="noopener">Live app</a>
+          <a href="https://github.com/shravanii15/AlignED" target="_blank" rel="noopener">Repository</a>
+          <a href="https://github.com/shravanii15/AlignED/blob/main/docs/CASE_STUDY.md" target="_blank" rel="noopener">Case study</a>
+          <a href="https://github.com/shravanii15/AlignED/blob/main/docs/EVALUATION.md" target="_blank" rel="noopener">Evaluation</a>
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <article class="case">
+    <header>
+      <h3>Member analytics app, Emeritus College (ASU)</h3>
+      <p class="stack">Python · Power Query · JavaScript · Chart.js · SheetJS · Power BI · Tableau</p>
+    </header>
+    <div class="grid">
+      <div>
+        <h4>Problem</h4>
+        <p>Membership data lived in fragmented Excel sources, and staff had no reliable view of dues or of who was actually on the rolls.</p>
+        <h4>What I built</h4>
+        <ul>
+          <li>Unified 570 member records into one source of truth with a Python/Power Query pipeline, validation rules, and two-tier entity resolution (ASU ID key, normalized-name fallback).</li>
+          <li>A privacy-by-design analytics app that runs fully client-side on hashed IDs, so it stores no PII.</li>
+          <li>A 10-year financial forecast (120 sheets, 1,200 linked formulas) plus Power BI and Tableau reports for self-serve planning.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Result</h4>
+        <ul>
+          <li>Live dues KPIs for staff: 8.8% participation, $4,055 collected.</li>
+          <li>Found that 112 of 521 members (21.5%) live out of state, which supported a parking-pass policy recommendation worth $31,360 a year.</li>
+        </ul>
+        <h4>Evidence</h4>
+        <p class="note">Built on private member data, so there is no public repository. A demo using sample data is on the way.</p>
+        <p class="links"><span class="soon">Demo video coming soon</span></p>
+        <!-- When the video is ready, replace the line above with:
+        <a href="YOUR_VIDEO_LINK" target="_blank" rel="noopener">Watch demo (sample data)</a> -->
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="experience" class="wrap">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="meta"><h3>Management Intern, Data Operations &amp; Quality Assurance</h3><p>Student Accessibility and Inclusive Learning Services (SAILS), Arizona State University · Nov 2026 – Present</p></div>
+    <ul>
+      <li>Turned a manual accommodation workflow into a data product: a Python/SQL pipeline on AIM exports feeding a Power BI view of turnaround, backlog, and deadline risk, used by program leadership to staff vendor work.</li>
+      <li>Introduced a deadline-risk score (time to due date, media length, vendor history) to prioritize caption and transcript requests, so at-risk accommodations are escalated early instead of at the deadline.</li>
+      <li>Replaced ad hoc caption review with a defect taxonomy and sampling-based QA (accuracy, sync, speaker ID, formatting), quantifying vendor error rates to hold vendors to quality standards.</li>
+      <li>Automated rework and at-risk alerts with Power Automate, reducing coordinator follow-up, while enforcing FERPA, WCAG 2.1, and Section 508 compliance on sensitive disability data.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="meta"><h3>Data Systems &amp; Operations Assistant</h3><p>Emeritus College, Arizona State University · May 2026 – Nov 2026</p></div>
+    <ul>
+      <li>Unified 570 member records from fragmented Excel sources into a single source of truth, with validation rules and two-tier entity resolution.</li>
+      <li>Designed a client-side analytics app on hashed IDs with zero stored PII, giving staff live dues KPIs.</li>
+      <li>Quantified a parking-pass policy change worth $31,360 a year; built a 10-year forecast and Power BI/Tableau reports for self-serve planning.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="meta"><h3>Analytics &amp; Automation Intern</h3><p>National Informatics Centre (NIC), Government of India · Jun 2024 – Dec 2024</p></div>
+    <ul>
+      <li>Co-built Jigyasa, a RAG assistant (Llama 3, LlamaIndex, Hugging Face embeddings, vector DB) served through a Django REST API.</li>
+      <li>Re-engineered a 3-hour manual reporting workflow into automated Python/SQL ETL across 5 source databases (120K+ records) with stage-level validation, cutting runtime to 20 minutes (89% faster).</li>
+      <li>Standardized KPI definitions across 3 departments, resolving conflicting metric logic into one view for leadership.</li>
+      <li>Profiled and refactored the SQL behind 15+ Power BI reports, cutting median query latency 57% (4.2s to 1.8s).</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="wrap">
+  <h2>More projects</h2>
+  <div class="cards">
+    <article class="card">
+      <h3>Financial Data ETL &amp; Governance Pipeline</h3>
+      <p class="stack">Python · SQL · Pandas · DuckDB · pytest</p>
+      <ul>
+        <li>Built a governed DuckDB warehouse from 3 public financial sources with staged extract-validate-load and reproducible runs.</li>
+        <li>Enforced 13 data-contract checks per run (nulls, uniqueness, ranges, referential integrity). They caught 40 of 503 S&amp;P 500 tickers missing from one source's snapshot.</li>
+        <li>Flagged market anomalies with a rolling z-score model (22 VIX spikes, 9 valuation outliers), with pytest coverage and audit reports.</li>
+      </ul>
+      <p class="links"><a href="https://github.com/shravanii15/financial-data-etl-pipeline" target="_blank" rel="noopener">Repository</a></p>
+    </article>
+    <article class="card">
+      <h3>AdventureWorks Retail Analytics Report</h3>
+      <p class="stack">Power BI · DAX · Star schema</p>
+      <ul>
+        <li>Modeled sales data as a star schema (one fact table, six lookup tables) so revenue and orders can be analyzed across six dimensions.</li>
+        <li>Wrote the DAX measures behind the KPIs, kept in the data model, and added a what-if price slider and a metric selector.</li>
+        <li>Delivered an 8-page report covering $24.9M in revenue and 25.2K orders.</li>
+      </ul>
+      <p class="links"><a href="https://github.com/shravanii15/Adventureworks-powerbi-dashboard" target="_blank" rel="noopener">Repository</a></p>
+    </article>
+  </div>
+</section>
+
+<section id="about" class="wrap">
+  <h2>Background</h2>
+  <div class="grid two">
+    <div>
+      <h3>Education</h3>
+      <p><strong>M.S., Data Science, Analytics &amp; Engineering</strong><br>Arizona State University · GPA 3.78/4.00<br><span class="muted">Statistical Machine Learning, Data Mining, Statistics for Data Analysts</span></p>
+      <p><strong>B.E., Computer Science &amp; Engineering (Data Science)</strong><br>University of Mumbai · CGPA 8.86/10</p>
+      <h3>Certifications</h3>
+      <p>Building with the Claude API, Anthropic (Aug 2026)<br>Alteryx Designer Core, Alteryx (Sep 2025)</p>
+    </div>
+    <div>
+      <h3>Skills</h3>
+      <dl class="skills">
+        <dt>AI &amp; LLM engineering</dt><dd>Claude API (Anthropic SDK), RAG (LlamaIndex), prompt engineering, LLM evals, scikit-learn</dd>
+        <dt>Data engineering</dt><dd>Python (Pandas, NumPy), SQL, R, ETL pipelines, DuckDB, PostgreSQL, Snowflake, Alteryx, data quality</dd>
+        <dt>Software &amp; deployment</dt><dd>Django REST APIs, JavaScript, Streamlit, Git/GitHub, GitHub Actions (CI), pytest</dd>
+        <dt>Analytics &amp; automation</dt><dd>Power BI (DAX), Tableau, Excel (Power Query), Power Automate, requirements gathering</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="wrap">
+  <h2>Contact</h2>
+  <p>Open to data engineering and adjacent roles, and to relocation. The fastest way to reach me is email.</p>
+  <p><a class="mail" href="mailto:work.shravanikk@gmail.com">work.shravanikk@gmail.com</a></p>
+  <p class="phone"><a href="tel:+16233419185">(623) 341-9185</a></p>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <span>Shravani Kulkarni</span>
+  <span><a href="https://github.com/shravanii15" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/shravani-kulkarni2003/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://drive.google.com/file/d/1VD20Q1ZDSuOYR6wA9f7kshZLSj4AENpf/view?usp=sharing" target="_blank" rel="noopener">Resume</a></span>
+</footer>
+
+</body>
+</html>
