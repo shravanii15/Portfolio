@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/aligned-demo",
+      "destination": "https://www.loom.com/share/b5b72dccd0b149df8c9c6b9d8b1d580a",
+      "permanent": false
+    }
+  ]
+}
