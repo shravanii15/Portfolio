@@ -61,7 +61,7 @@
       <p class="pill"><span class="dot"></span>Tempe, AZ · Open to relocation</p>
       <h1>Shravani Kishor Kulkarni</h1>
       <p class="role">Data Engineer</p>
-      <p class="pitch">I build data pipelines, LLM apps, and internal tools, end to end.</p>
+      <p class="pitch" id="pitch">I build data pipelines, LLM apps, and internal tools, end to end.</p>
       <p class="lede">I shipped a RAG assistant and Python/SQL pipelines that cut a 3-hour process to 20 minutes, and built an analytics app that surfaced $31K in yearly savings. I test LLMs against simple baselines before shipping them, and I work directly with non-technical teams to turn vague asks into working systems.</p>
       <div class="actions">
         <a class="btn primary" href="https://drive.google.com/file/d/1VD20Q1ZDSuOYR6wA9f7kshZLSj4AENpf/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
@@ -75,11 +75,19 @@
     </div>
   </div>
   <div class="wrap">
-    <dl class="proof">
+    <div class="lens" role="group" aria-label="View this portfolio as">
+      <span class="lens-label">View as</span>
+      <button type="button" class="chip" data-lens="all" aria-pressed="true">Everything</button>
+      <button type="button" class="chip" data-lens="data" aria-pressed="false">Data &amp; Analytics</button>
+      <button type="button" class="chip" data-lens="fde" aria-pressed="false">Forward Deployed &amp; Solutions</button>
+      <button type="button" class="chip" data-lens="ops" aria-pressed="false">Ops &amp; Product</button>
+    </div>
+    <dl class="proof" id="proof">
       <div><dt>3 h → 20 min</dt><dd>Reporting ETL across 5 databases, 120K+ records (NIC)</dd></div>
       <div><dt>$31,360 / yr</dt><dd>Policy savings found with a client-side analytics app (ASU)</dd></div>
       <div><dt>170 gaps</dt><dd>Statistically tested curriculum-to-market skill gaps (AlignED)</dd></div>
     </dl>
+    <p class="start-here" id="startHere" hidden></p>
   </div>
 </section>
 
@@ -92,6 +100,7 @@
       <div>
         <h3>AlignED: Curriculum-to-Market Gap Engine</h3>
         <ul class="tags"><li>Python</li><li>SQL</li><li>LLMs</li><li>Statistics</li><li>Streamlit</li><li>FastAPI</li><li>Prefect</li><li>Docker</li><li>GitHub Actions</li></ul>
+        <a class="status" id="status" href="https://github.com/shravanii15/AlignED/actions" target="_blank" rel="noopener" hidden><span class="pulse" aria-hidden="true"></span><span class="status-text"></span></a>
       </div>
       <div class="keynum"><strong>170</strong><span>significant skill gaps</span></div>
     </header>
@@ -114,6 +123,19 @@
         <h4>Limits I report</h4>
         <p>Fifty items is a small sample. No demand trend survived multiple-comparison correction (0 of 67 skills), so the trends page labels them early hints.</p>
       </div>
+    </div>
+    <div class="flip" id="flip">
+      <div class="flip-head">
+        <h4>Interactive: the result flipped</h4>
+        <div class="seg" role="group" aria-label="Choose evaluation set">
+          <button type="button" data-set="dev" aria-pressed="true">Development &middot; 104 items</button>
+          <button type="button" data-set="held" aria-pressed="false">Held-out &middot; 50 fresh items</button>
+        </div>
+      </div>
+      <p class="flip-sub">Skill-extraction F1 score. Higher is better.</p>
+      <div class="bars" id="flipRows"></div>
+      <p class="flip-note" id="flipNote" aria-live="polite">On the 104 items I used while building, the LLM method led (F1 0.426 vs 0.364). Its similarity cutoff was tuned on these same items, so this result is optimistic.</p>
+      <noscript><p class="flip-note">Development set: LLM 0.426, keyword 0.364. Held-out set: keyword 0.311, LLM 0.198.</p></noscript>
     </div>
     <footer class="case-foot">
       <!-- Hidden until the Loom link exists: <a class="btn sm" href="LOOM_URL" target="_blank" rel="noopener">Watch demo</a> -->
@@ -307,6 +329,7 @@
   <span><a href="https://github.com/shravanii15" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/shravani-kulkarni2003/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://drive.google.com/file/d/1VD20Q1ZDSuOYR6wA9f7kshZLSj4AENpf/view?usp=sharing" target="_blank" rel="noopener">Resume</a></span>
 </footer>
 
+<script src="app.js" defer></script>
 <script>
   (function () {
     var root = document.documentElement, btn = document.getElementById("themeToggle");
