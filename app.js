@@ -179,4 +179,17 @@
         .catch(function () { /* stay hidden: never show a guess */ });
     }
   }
+
+  /* ---------- 4. Highlight the current section in the nav ---------- */
+  if ("IntersectionObserver" in window) {
+    var links = {};
+    Array.prototype.forEach.call(document.querySelectorAll("header nav a[href^='#']"), function (a) { links[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        Object.keys(links).forEach(function (k) { links[k].classList.toggle("active", k === en.target.id); });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    Object.keys(links).forEach(function (k) { var s = document.getElementById(k); if (s) io.observe(s); });
+  }
 })();

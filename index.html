@@ -104,18 +104,34 @@
       </div>
       <div class="keynum"><strong>170</strong><span>significant skill gaps</span></div>
     </header>
+    <div class="shots">
+      <a class="shot" href="https://aligned-shravanikulkarni.streamlit.app" target="_blank" rel="noopener">
+        <img src="assets/aligned-home.webp" alt="AlignED app overview page showing 13 programs, 1,378 courses, 1,660 job postings and 170 tested skill gaps" width="1400" height="586" loading="lazy">
+        <span>Overview: the headline finding</span>
+      </a>
+      <a class="shot" href="https://aligned-shravanikulkarni.streamlit.app" target="_blank" rel="noopener">
+        <img src="assets/aligned-gaps.webp" alt="AlignED skill-gap chart comparing what employers ask for with what Georgia Tech MS Computer Science courses name" width="1400" height="586" loading="lazy">
+        <span>Skill gaps by program</span>
+      </a>
+      <a class="shot shot-arch" href="https://github.com/shravanii15/AlignED#how-it-works" target="_blank" rel="noopener">
+        <img src="assets/aligned-architecture.svg" alt="AlignED architecture: data sources to SQLite, skill extraction, statistical gap analysis, recommendations and dashboard" width="1000" height="760" loading="lazy">
+        <span>Architecture</span>
+      </a>
+    </div>
     <div class="grid">
       <div>
         <h4>Question</h4>
         <p>Do graduate computing programs teach what employers ask for? "Industry-ready" is usually claimed, not measured, so I built a system that measures it and reports how far the measurement can be trusted.</p>
         <p class="finding"><strong>Example finding:</strong> Python appears in 40% of sampled job postings but in none of the 295 course descriptions in one department's catalog.</p>
-        <h4>What I built</h4>
+        <details class="more">
+        <summary>What I built</summary>
         <ul>
           <li>Matched 1,378 courses from 13 programs against 1,660 job postings on O*NET skills, and tested 170 skill gaps with z-tests and Fisher's exact test under FDR control.</li>
           <li>A validated, idempotent daily ingestion pipeline (retries, raw snapshots, de-duplication, audit tables), orchestrated with Prefect and run on GitHub Actions.</li>
           <li>A versioned, authenticated, rate-limited REST API (FastAPI) with OpenAPI docs and Docker packaging, covered by 218 automated tests gated in CI.</li>
           <li>A public Streamlit app with 724 ranked recommendations.</li>
         </ul>
+        </details>
       </div>
       <div>
         <h4>Decision I can defend</h4>
@@ -158,12 +174,14 @@
       <div>
         <h4>Problem</h4>
         <p>Membership data lived in fragmented Excel sources, and staff had no reliable view of dues or of who was actually on the rolls.</p>
-        <h4>What I built</h4>
+        <details class="more">
+        <summary>What I built</summary>
         <ul>
           <li>Unified 570 member records into one source of truth with a Python/Power Query pipeline, validation rules, and two-tier entity resolution (ASU ID key, normalized-name fallback).</li>
           <li>A privacy-by-design analytics app that runs fully client-side on hashed IDs, so it stores no PII.</li>
           <li>A 10-year financial forecast (120 sheets, 1,200 linked formulas) plus Power BI and Tableau reports for self-serve planning.</li>
         </ul>
+        </details>
       </div>
       <div>
         <h4>Result</h4>
@@ -249,6 +267,7 @@
   <h2>Smaller builds, same standards</h2>
   <div class="cards">
     <article class="card">
+      <a class="card-img" href="https://github.com/shravanii15/financial-data-etl-pipeline" target="_blank" rel="noopener"><img src="assets/financial-report.webp" alt="Run report from the financial data pipeline: 11 of 13 validation checks passed, 31 anomalies flagged, with a table of failing data-quality checks" width="1300" height="1034" loading="lazy"></a>
       <div class="card-top">
         <h3>Financial Data ETL &amp; Governance Pipeline</h3>
         <div class="keynum sm"><strong>13</strong><span>data-contract checks per run</span></div>
@@ -262,6 +281,7 @@
       <div class="card-foot"><a class="btn sm" href="https://github.com/shravanii15/financial-data-etl-pipeline" target="_blank" rel="noopener">GitHub</a></div>
     </article>
     <article class="card">
+      <a class="card-img" href="https://github.com/shravanii15/Adventureworks-powerbi-dashboard" target="_blank" rel="noopener"><img src="assets/adventureworks.webp" alt="AdventureWorks Power BI executive dashboard showing $24.9M revenue, $10.5M profit, 25.2K orders and a 2.2% return rate" width="1102" height="631" loading="lazy"></a>
       <div class="card-top">
         <h3>AdventureWorks Retail Analytics Report</h3>
         <div class="keynum sm"><strong>$24.9M</strong><span>revenue analyzed, 25.2K orders</span></div>
