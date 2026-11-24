@@ -93,6 +93,27 @@
   </div>
 </section>
 
+<section class="wrap demo-strip" aria-label="AlignED demo">
+  <div class="demo-grid">
+    <div class="browser">
+      <div class="browser-bar" aria-hidden="true"><span></span><span></span><span></span><em>aligned-shravanikulkarni.streamlit.app</em></div>
+      <picture>
+        <source media="(prefers-reduced-motion: reduce)" srcset="assets/aligned-demo-poster.webp">
+        <img src="assets/aligned-demo.webp" alt="Silent looping tour of the AlignED app: the overview, matching a job posting, methodology and the model evaluation" width="960" height="415">
+      </picture>
+    </div>
+    <div class="demo-copy">
+      <p class="kicker">See it running</p>
+      <h2>AlignED in motion</h2>
+      <p>A short tour of the live app: the overview, matching a job posting, methodology and the model evaluation.</p>
+      <div class="actions">
+        <a class="btn primary" href="/aligned-demo" data-demo target="_blank" rel="noopener">Watch the full demo</a>
+        <a class="btn" href="https://aligned-shravanikulkarni.streamlit.app" target="_blank" rel="noopener">Open the live app</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="wrap voices" aria-label="Feedback from Emeritus College leadership">
   <p class="kicker">From Emeritus College leadership</p>
   <div class="voices-grid">
@@ -170,7 +191,7 @@
       <noscript><p class="flip-note">Development set: LLM 0.426, keyword 0.364. Held-out set: keyword 0.311, LLM 0.198.</p></noscript>
     </div>
     <footer class="case-foot">
-      <a class="btn sm primary" href="/aligned-demo" target="_blank" rel="noopener">Watch demo</a>
+      <a class="btn sm primary" href="/aligned-demo" data-demo target="_blank" rel="noopener">Watch demo</a>
       <a class="btn sm" href="https://aligned-shravanikulkarni.streamlit.app" target="_blank" rel="noopener">Live app</a>
       <a class="btn sm" href="https://github.com/shravanii15/AlignED" target="_blank" rel="noopener">GitHub</a>
       <a class="btn sm" href="https://github.com/shravanii15/AlignED/blob/main/docs/CASE_STUDY.md" target="_blank" rel="noopener">Case study</a>
@@ -387,6 +408,11 @@
   <span><a href="https://github.com/shravanii15" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/shravani-kulkarni2003/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://drive.google.com/file/d/1VD20Q1ZDSuOYR6wA9f7kshZLSj4AENpf/view?usp=sharing" target="_blank" rel="noopener">Resume</a></span>
 </footer>
 
+<dialog id="demoDialog" class="demo-dialog" aria-label="AlignED demo video">
+  <button type="button" class="demo-close" aria-label="Close video">&times;</button>
+  <div class="demo-frame"><iframe data-src="https://www.loom.com/embed/b5b72dccd0b149df8c9c6b9d8b1d580a?hide_owner=true&amp;hide_share=true&amp;hide_title=true" title="AlignED demo video" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+  <p class="demo-fallback"><a href="/aligned-demo" target="_blank" rel="noopener">Video not loading? Open it on Loom</a></p>
+</dialog>
 <script src="app.js" defer></script>
 <script>
   (function () {

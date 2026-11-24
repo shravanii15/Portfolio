@@ -223,4 +223,16 @@
     }, { threshold: 0.6 });
     Array.prototype.forEach.call(counters, function (el) { cio.observe(el); });
   }
+
+  /* ---------- 6. Inline demo player ---------- */
+  var dlg = document.getElementById("demoDialog");
+  if (dlg && typeof dlg.showModal === "function") {
+    var frame = dlg.querySelector("iframe");
+    function openDemo(e) { e.preventDefault(); frame.src = frame.getAttribute("data-src"); dlg.showModal(); }
+    function closeDemo() { if (dlg.open) dlg.close(); }
+    Array.prototype.forEach.call(document.querySelectorAll("[data-demo]"), function (a) { a.addEventListener("click", openDemo); });
+    dlg.querySelector(".demo-close").addEventListener("click", closeDemo);
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) closeDemo(); });
+    dlg.addEventListener("close", function () { frame.removeAttribute("src"); });
+  }
 })();
