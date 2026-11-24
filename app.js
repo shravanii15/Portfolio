@@ -29,7 +29,7 @@
         ["$31,360 / yr", "Policy change quantified for decision makers (ASU)"],
         ["Risk score", "Deadline-risk prioritization so at-risk accommodation requests escalate early (SAILS)"]
       ],
-      start: [["SAILS experience", "#experience"], ["Emeritus College app", "#work"], ["How I work", "#how"]]
+      start: [["AlignED product brief", "notes/aligned-product-brief.html"], ["SAILS experience", "#experience"], ["Emeritus College app", "#work"]]
     }
   };
 
@@ -191,5 +191,36 @@
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     Object.keys(links).forEach(function (k) { var s = document.getElementById(k); if (s) io.observe(s); });
+  }
+
+  /* ---------- 5. Gentle reveal on scroll + count-up (skipped for reduced motion) ---------- */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("js");
+    var targets = document.querySelectorAll(".case,.card,.principle,.job,.note-card,.panel,.proof>div,.contact-card");
+    var rio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); rio.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    Array.prototype.forEach.call(targets, function (el) { el.classList.add("reveal"); rio.observe(el); });
+
+    var counters = document.querySelectorAll("[data-count]");
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        cio.unobserve(en.target);
+        var el = en.target, end = parseFloat(el.getAttribute("data-count")), pre = el.getAttribute("data-prefix") || "";
+        var t0 = null, dur = 900;
+        function step(ts) {
+          if (t0 === null) t0 = ts;
+          var p = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = pre + Math.round(end * e).toLocaleString("en-US");
+          if (p < 1) requestAnimationFrame(step); else el.textContent = pre + end.toLocaleString("en-US");
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    Array.prototype.forEach.call(counters, function (el) { cio.observe(el); });
   }
 })();
