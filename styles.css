@@ -209,8 +209,16 @@ li::marker{color:var(--accent)}
 .post-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
 @media (max-width:860px){.post-table{font-size:.85rem}.post-table th,.post-table td{padding:9px 8px}}
 
+/* chips + job body */
+.job-body{min-width:0}
+.job-body details.more{margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:6px 0 0}
+.chips li{margin:0;padding:4px 12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--text);font-size:.84rem;font-weight:500}
+.chips li::marker{content:""}
+.skills dd{margin-top:0}
+
 /* background */
-.grid.two{gap:24px}
+.grid.two{gap:24px;align-items:start}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
 .panel h3{margin:0 0 10px}
 .panel h3:not(:first-child){margin-top:26px}

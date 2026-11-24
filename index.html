@@ -62,7 +62,7 @@
       <h1>Shravani Kishor Kulkarni</h1>
       <p class="role">Data Engineer</p>
       <p class="pitch" id="pitch">I build data pipelines, LLM apps, and internal tools, end to end.</p>
-      <p class="lede">I shipped a RAG assistant and Python/SQL pipelines that cut a 3-hour process to 20 minutes, and built an analytics app that surfaced $31K in yearly savings. I test LLMs against simple baselines before shipping them, and I work directly with non-technical teams to turn vague asks into working systems.</p>
+      <p class="lede">I have shipped a RAG assistant, Python/SQL pipelines and internal analytics tools. I test LLMs against simple baselines before shipping them, and I work directly with non-technical teams to turn vague asks into working systems.</p>
       <div class="actions">
         <a class="btn primary" href="https://drive.google.com/file/d/1VD20Q1ZDSuOYR6wA9f7kshZLSj4AENpf/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
         <a class="btn" href="https://github.com/shravanii15" target="_blank" rel="noopener">GitHub</a>
@@ -135,7 +135,7 @@
       </div>
       <div>
         <h4>Decision I can defend</h4>
-        <p>I held out 50 fresh items, labeled before either method ran, and compared a keyword baseline against an LLM with paired bootstrap confidence intervals. The keyword method won (F1 0.311 vs 0.198), so I shipped it. On the 104 items used during development the order was reversed, which is why the held-out set mattered.</p>
+        <p>I held out 50 fresh items, labeled before either method ran. The keyword baseline beat the LLM (F1 0.311 vs 0.198), so I shipped it. The chart below shows how the result flipped.</p>
         <h4>Limits I report</h4>
         <p>Fifty items is a small sample. No demand trend survived multiple-comparison correction (0 of 67 skills), so the trends page labels them early hints.</p>
       </div>
@@ -233,31 +233,44 @@
   <div class="timeline">
     <div class="job">
       <div class="meta"><h3>Management Intern, Data Operations &amp; Quality Assurance</h3><p>Student Accessibility and Inclusive Learning Services (SAILS), Arizona State University</p><span class="when">Nov 2026 – Present</span></div>
+      <div class="job-body">
       <ul>
         <li>Turned a manual accommodation workflow into a data product: a Python/SQL pipeline on AIM exports feeding a Power BI view of turnaround, backlog, and deadline risk, used by program leadership to staff vendor work.</li>
         <li>Introduced a deadline-risk score (time to due date, media length, vendor history) to prioritize caption and transcript requests, so at-risk accommodations are escalated early instead of at the deadline.</li>
+      </ul>
+      <details class="more"><summary>More from this role</summary>
+      <ul>
         <li>Replaced ad hoc caption review with a defect taxonomy and sampling-based QA (accuracy, sync, speaker ID, formatting), quantifying vendor error rates to hold vendors to quality standards.</li>
         <li>Automated rework and at-risk alerts with Power Automate, reducing coordinator follow-up, while enforcing FERPA, WCAG 2.1, and Section 508 compliance on sensitive disability data.</li>
       </ul>
+      </details>
+      </div>
     </div>
 
     <div class="job">
       <div class="meta"><h3>Data Systems &amp; Operations Assistant</h3><p>Emeritus College, Arizona State University</p><span class="when">May 2026 – Nov 2026</span></div>
+      <div class="job-body">
       <ul>
-        <li>Unified 570 member records from fragmented Excel sources into a single source of truth, with validation rules and two-tier entity resolution.</li>
-        <li>Designed a client-side analytics app on hashed IDs with zero stored PII, giving staff live dues KPIs.</li>
-        <li>Quantified a parking-pass policy change worth $31,360 a year; built a 10-year forecast and Power BI/Tableau reports for self-serve planning.</li>
+        <li>Unified 570 member records into a single source of truth and built a client-side analytics app on hashed IDs with zero stored PII.</li>
+        <li>Quantified a parking-pass policy change worth $31,360 a year and built a 10-year forecast. <a href="#work">Full write-up above.</a></li>
       </ul>
+      </div>
     </div>
 
     <div class="job">
       <div class="meta"><h3>Analytics &amp; Automation Intern</h3><p>National Informatics Centre (NIC), Government of India</p><span class="when">Jun 2024 – Dec 2024</span></div>
+      <div class="job-body">
       <ul>
         <li>Co-built Jigyasa, a RAG assistant (Llama 3, LlamaIndex, Hugging Face embeddings, vector DB) served through a Django REST API.</li>
         <li>Re-engineered a 3-hour manual reporting workflow into automated Python/SQL ETL across 5 source databases (120K+ records) with stage-level validation, cutting runtime to 20 minutes (89% faster).</li>
+      </ul>
+      <details class="more"><summary>More from this role</summary>
+      <ul>
         <li>Standardized KPI definitions across 3 departments, resolving conflicting metric logic into one view for leadership.</li>
         <li>Profiled and refactored the SQL behind 15+ Power BI reports, cutting median query latency 57% (4.2s to 1.8s).</li>
       </ul>
+      </details>
+      </div>
     </div>
   </div>
 </section>
@@ -322,10 +335,10 @@
     <div class="panel">
       <h3>Skills</h3>
       <dl class="skills">
-        <dt>AI &amp; LLM engineering</dt><dd>Claude API (Anthropic SDK), RAG (LlamaIndex), prompt engineering, LLM evals, scikit-learn</dd>
-        <dt>Data engineering</dt><dd>Python (Pandas, NumPy), SQL, R, ETL pipelines, DuckDB, PostgreSQL, Snowflake, Alteryx, data quality</dd>
-        <dt>Software &amp; deployment</dt><dd>Django REST APIs, JavaScript, Streamlit, Git/GitHub, GitHub Actions (CI), pytest</dd>
-        <dt>Analytics &amp; automation</dt><dd>Power BI (DAX), Tableau, Excel (Power Query), Power Automate, requirements gathering</dd>
+        <dt>AI &amp; LLM engineering</dt><dd><ul class="chips"><li>Claude API (Anthropic SDK)</li><li>RAG (LlamaIndex)</li><li>Prompt engineering</li><li>LLM evals</li><li>scikit-learn</li></ul></dd>
+        <dt>Data engineering</dt><dd><ul class="chips"><li>Python (Pandas, NumPy)</li><li>SQL</li><li>R</li><li>ETL pipelines</li><li>DuckDB</li><li>PostgreSQL</li><li>Snowflake</li><li>Alteryx</li><li>Data quality</li></ul></dd>
+        <dt>Software &amp; deployment</dt><dd><ul class="chips"><li>Django REST APIs</li><li>JavaScript</li><li>Streamlit</li><li>Git/GitHub</li><li>GitHub Actions (CI)</li><li>pytest</li></ul></dd>
+        <dt>Analytics &amp; automation</dt><dd><ul class="chips"><li>Power BI (DAX)</li><li>Tableau</li><li>Excel (Power Query)</li><li>Power Automate</li><li>Requirements gathering</li></ul></dd>
       </dl>
     </div>
   </div>
