@@ -129,6 +129,27 @@ li::marker{color:var(--accent)}
 .job .meta p{margin:8px 0 10px;color:var(--muted);font-size:.9rem}
 .when{display:inline-block;padding:3px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:700}
 
+/* notes */
+.note-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px 32px;box-shadow:var(--shadow);text-decoration:none;color:var(--text);transition:transform .22s,box-shadow .22s,border-color .22s}
+.note-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.note-tag{display:inline-block;padding:3px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.78rem;font-weight:700;margin-bottom:12px}
+.note-card h3{font-size:1.35rem;margin-bottom:8px}
+.note-card p{color:var(--muted);max-width:70ch}
+.note-card .read{color:var(--accent);font-weight:600}
+.post{max-width:760px;padding-top:48px}
+.post h1{white-space:normal;font-size:clamp(1.9rem,5vw,2.8rem);margin:6px 0 14px}
+.post h2{font-size:1.35rem;margin:34px 0 10px}
+.post-lede{font-size:1.15rem;color:var(--muted)}
+.post p,.post li{font-size:1.02rem}
+.post ul{margin-bottom:12px}
+.back{display:inline-block;margin-bottom:22px;font-weight:600;font-size:.92rem;text-decoration:none}
+.post-table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:.95rem}
+.post-table th,.post-table td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}
+.post-table th{background:var(--surface-2);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.post-table tr:last-child td{border-bottom:0}
+.post-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+@media (max-width:860px){.post-table{font-size:.85rem}.post-table th,.post-table td{padding:9px 8px}}
+
 /* background */
 .grid.two{gap:24px}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
