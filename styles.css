@@ -5,7 +5,7 @@
   --shadow-lg:0 2px 4px rgba(11,31,51,.05),0 18px 40px rgba(15,118,110,.14);
   --glow:rgba(15,118,110,.07); --glow-2:rgba(15,118,110,.05);
   --radius:16px;
-  --font-head:"Plus Jakarta Sans","Inter",system-ui,sans-serif;
+  --font-head:"Geist","Inter",system-ui,sans-serif;
 }
 :root[data-theme="dark"]{
   --bg:#0a1624; --surface:#0f2236; --surface-2:#142b44; --text:#e6edf5; --muted:#93a4b8; --line:#1e3550;
@@ -16,12 +16,12 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
+body{margin:0;background:var(--bg);color:var(--text);font:15.5px/1.5 "Geist","Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 a{color:var(--accent);text-underline-offset:3px}
 h1,h2,h3,h4,.brand,.proof dt,.keynum strong,.mail,.role{font-family:var(--font-head)}
-h1,h2,h3,h4{line-height:1.2;margin:0}
-p{margin:0 0 12px}
+h1,h2,h3,h4{line-height:1.2;margin:0;letter-spacing:-.015em}
+p{margin:0 0 10px}
 
 /* top bar */
 .top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
@@ -138,7 +138,7 @@ h3{font-size:1.2rem;letter-spacing:0}
 h4{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:20px 0 8px}
 h4:first-child{margin-top:0}
 ul{padding-left:1.15rem;margin:0}
-li{margin-bottom:7px}
+li{margin-bottom:5px;line-height:1.5}
 li::marker{color:var(--accent)}
 
 /* tags */
